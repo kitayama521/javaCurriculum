@@ -31,7 +31,7 @@ public class Qes1_13 {
 		bNum = 10;
 		sNum = 100;
 		iNum = 1000;
-		lNum = 10000;
+		lNum = 10000l;
 		fNum = 9.5f;
 		dNum = 10.5d;
 		chart = 'a';
@@ -87,7 +87,7 @@ public class Qes1_13 {
 		
 //		問７
 //		問6での変数を使用してBMIが出力されるようにし、「BMIは⚪⚪︎です」と出力
-		System.out.println("「BMIは" + ((Math.floor(dNum2 / ((dNum1 / sNum) * (dNum1 / sNum)) * 10) / 10)) + "です」" + "\n");
+		System.out.println("「BMIは" + (((double)Math.round(dNum2 / ((dNum1 / sNum) * (dNum1 / sNum)) * 10) / 10)) + "です」" + "\n");
 		
 //		問８
 //		text1に鈴木一郎を再代入
@@ -138,15 +138,14 @@ public class Qes1_13 {
 		
 //		問10
 //		問8で使用した年齢が25歳以上であればtrueを出力
-		check = (bNum >= 25);
+		check = (bNum1 >= 25);
 		System.out.println(check+"\n");
 		
 //		問11
 //		年齢、身長、体重を文字列型に変換
-		Integer i = Integer.valueOf(bNum1);
-		String str = i.toString();
-		String str1 = Double.valueOf(dNum1).toString();
-		String str2 = Double.valueOf(dNum2).toString();
+		String str = String.valueOf(bNum1);
+		String str1 = String.valueOf(dNum1);
+		String str2 = String.valueOf(dNum2);
 //		年齢、身長、体重を出力
 		System.out.println(str + str1 + str2 + "\n");
 		
